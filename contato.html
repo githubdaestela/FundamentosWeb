@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Perfil</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <ul id="menu">
@@ -20,48 +20,54 @@
 
     <div class="container mb-50">
         <div>
-        <form> 
-            <label for="nome">Nome:</label>
-            <br>
-            <input type="text" id="nome">
-            <br>
-            <br>
-            <label for="email">E-mail:</label>
-            <br>
-            <input type="email" id="email">
-            <br>
-            <br>
-            <label for="assunto">Assunto:</label>
-            <br>
-            <textarea name="assunto" id="assunto" cols="30" rows="10"></textarea>
+            <form> 
+                <label for="nome">Nome:</label>
+                <br>
+                <input type="text" id="nome" onkeyup="validaNome()">
+                <div id="txtNome"></div>
+                <br>
+                <label for="email">E-mail:</label>
+                <br>
+                <input type="email" id="email" onkeyup="validaEmail()">
+                <div id="txtEmail"></div>
+                <br>
+                <label for="assunto">Assunto:</label>
+                <br>
+                <textarea name="assunto" id="assunto" cols="30" rows="10" onkeyup="validaAssunto()"></textarea>
+                <div id="txtAssunto"></div>
+                <br>
+                <br>
+                <button onclick="enviar()">Enviar</button>
             </form>
-            <button>Enviar</button>
+
         </div>
 
         <div class="ml-50">
             <p>Av. Paulista, 37 - Bela Vista</p>
             <p> São Paulo - SP</p>
-
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.9251234602093!2d-46.64742430499148!3d-23.571132546637692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5996204bba01%3A0x1d4b89c063257237!2sCasa%20das%20Rosas%20-%20Espa%C3%A7o%20Haroldo%20de%20Campos%20de%20Poesia%20e%20Literatura!5e0!3m2!1spt-BR!2sbr!4v1606437121677!5m2!1spt-BR!2sbr" 
-            width="400" 
-            height="250" 
-            frameborder="0" 
-            style="border:0;" 
-            allowfullscreen="" 
-            aria-hidden="false" 
-            tabindex="0"></iframe>
+           
+            <iframe src="google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.924882922377!2d-46.64739588502204!3d-23.571141184678076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5996204bba01%3A0x1d4b89c063257237!2sCasa%20das%20Rosas%20-%20Espa%C3%A7o%20Haroldo%20de%20Campos%20de%20Poesia%20e%20Literatura!5e0!3m2!1spt-BR!2sbr!4v1606744530026!5m2!1spt-BR!2sbr" width="400" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" onmousemove="mapaZoom()" onmouseout="mapaNormal()" id="mapa"></iframe>
         </div>
     </div>
     
     <hr>
+
    <footer class="center">
-     
+
      <div class="container">
-       <a href="https://www.linkedin.com/in/estela-maria-costa-monteiro-367907179/" target="_blank"> <img class="tm-social" src="assets/img/linkedin.png" alt="Logo azul da Rede Social LinkIn"> </a> 
-       <a href="https://github.com/githubdaestela" target="_blank"> <img class="tm-social" src="assets/img/github.png" alt="Logo preto da palataforma de versionamento GitHub"> </a>
+        <a href="linkedin.com/in/estela-maria-costa-monteiro-367907179/" target="_blank"> 
+            <img class="tm-social" src="assets/img/linkedin.png" alt="Logo azul da Rede Social LinkIn"> 
+        </a> 
+
+        <a href="github.com/githubdaestela" target="_blank"> 
+            <img class="tm-social" src="assets/img/github.png" alt="Logo preto da palataforma de versionamento GitHub"> 
+        </a>
      </div>
+
         <p>Todos os direitos reservados: Estela Maria &copy</p>
    </footer>
+
+   <script src="assets/js/script.js"> </script>
 
 </body>
 </html>
